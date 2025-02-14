@@ -34,10 +34,10 @@ export const getWeekendsInRange = (range: {
 };
 export const formatDate = (date: Date | null): string => {
   return date
-    ? date.toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "short",
-        day: "numeric",
+    ? date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
       })
-    : "Not selected";
+    : 'Not selected';
 };

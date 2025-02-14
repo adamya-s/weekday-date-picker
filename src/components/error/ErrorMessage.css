@@ -1,0 +1,33 @@
+.error-message {
+  background-color: #fee2e2;
+  border: 1px solid #ef4444;
+  color: #dc2626;
+  padding: 0.75rem;
+  margin: 1rem 0;
+  border-radius: 0.375rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.error-message button {
+  background: none;
+  border: none;
+  color: #dc2626;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+/* Add focus styles for keyboard navigation */
+.calendar-grid:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.calendar-day:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  position: relative;
+  z-index: 1;
+}

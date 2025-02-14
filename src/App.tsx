@@ -1,6 +1,6 @@
-import React from "react";
-import "./App.css";
-import WeekdayDateRangePicker from "./components/WeekdayDateRangePicker";
+import React from 'react';
+import './App.css';
+import WeekdayDateRangePicker from './components/WeekdayDateRangePicker';
 
 const App: React.FC = () => {
   const predefinedRanges = [
@@ -11,7 +11,7 @@ const App: React.FC = () => {
         const start = new Date();
         start.setDate(end.getDate() - 6);
         return { start, end };
-      }
+      },
     },
     {
       label: 'Last 30 days',
@@ -20,11 +20,14 @@ const App: React.FC = () => {
         const start = new Date();
         start.setDate(end.getDate() - 29);
         return { start, end };
-      }
-    }
+      },
+    },
   ];
 
-  const handleRangeChange = (range: { start: Date | null, end: Date | null }, weekends: Date[]) => {
+  const handleRangeChange = (
+    range: { start: Date | null; end: Date | null },
+    weekends: Date[]
+  ) => {
     console.log('Selected range:', range);
     console.log('Weekends in range:', weekends);
   };
@@ -33,13 +36,13 @@ const App: React.FC = () => {
     <>
       <div>
         <h1>Date Range Picker (Weekday)</h1>
-        <WeekdayDateRangePicker 
+        <WeekdayDateRangePicker
           predefinedRanges={predefinedRanges}
           onRangeChange={handleRangeChange}
         />
       </div>
     </>
   );
-}
+};
 
 export default App;
